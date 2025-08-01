@@ -16,6 +16,9 @@ form.addEventListener('submit', async e => {
   const query = e.target.elements['search-text'].value.trim();
 
   showLoader();
+
+  await new Promise(resolve => requestAnimationFrame(resolve));
+
   clearGallery();
 
   try {
